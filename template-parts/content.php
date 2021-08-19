@@ -8,9 +8,6 @@
  */
 
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -20,14 +17,14 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+
 				<?php
 				jwp_posted_on();
 				jwp_posted_by();
 				?>
-			</div><!-- .entry-meta -->
+
+
 		<?php endif; ?>
-	</header><!-- .entry-header -->
 
 	<?php jwp_post_thumbnail(); ?>
 
